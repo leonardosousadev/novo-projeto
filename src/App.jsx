@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -23,6 +23,7 @@ const Login = () => {
             onChange={(e) => setEmail(e.target.value)}
             style={styles.input}
             required
+            placeholder="leo@mail.com"
           />
         </div>
         <div style={styles.inputGroup}>
@@ -34,6 +35,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
             style={styles.input}
             required
+            placeholder="*********"
           />
         </div>
         <button type="submit" style={styles.button}>
@@ -61,9 +63,8 @@ const styles = {
   form: {
     display: "flex",
     flexDirection: "column",
-    width: "100vw",
+    backgroundColor: '#fff',
     padding: "30px",
-    backgroundColor: "#fff",
     borderRadius: "12px",
     boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
     transition: "box-shadow 0.3s ease",
@@ -85,6 +86,7 @@ const styles = {
     fontSize: "18px",
     transition: "border-color 0.3s ease, box-shadow 0.3s ease",
     boxShadow: "inset 0 1px 3px rgba(0, 0, 0, 0.1)",
+    backgroundColor: 'transparent'
   },
   inputFocused: {
     borderColor: "#007bff",
@@ -92,7 +94,7 @@ const styles = {
   },
   button: {
     padding: "12px",
-    backgroundColor: "#00bff",
+    backgroundColor: "#2196f3",
     color: "#fff",
     border: "none",
     borderRadius: "6px",
